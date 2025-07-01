@@ -38,5 +38,4 @@ SmartVest detects and classifies hits from projectiles (BBs or rubber bullets) o
 
 ---
 
-## 📦 Project Structure
 
