@@ -8,7 +8,7 @@
 
 Here's a visual mockup of the SmartVest system design:
 
-![SmartVest Design Mockup](Asset/mockup.png)
+![SmartVest Design Mockup](Asset/Mockup.png)
 
 ---
 
