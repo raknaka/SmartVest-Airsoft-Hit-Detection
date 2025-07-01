@@ -4,6 +4,14 @@
 
 ---
 
+## 🧩 Project Mockup
+
+Here's a visual mockup of the SmartVest system design:
+
+![SmartVest Design Mockup](Asset/mockup.png)
+
+---
+
 ## 💡 What Does It Do?
 
 SmartVest detects and classifies hits from projectiles (BBs or rubber bullets) on a player’s body using multiple force and vibration sensors embedded within a vest. It is especially designed to:
