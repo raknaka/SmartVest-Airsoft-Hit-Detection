@@ -55,21 +55,25 @@ SmartVest detects and classifies hits from projectiles (BBs or rubber bullets) o
 
 ## 🧪 Testing & Results  
 
-- **Projectile Testing**  
-  - Works best at **5–10 m**.  
-  - Piezo sensors generate up to **14V**, while ESP32 ADC max is **3.3V** (4095).  
+### Projectile & Airsoft Testing  
+- Works best at **5–10 m**.  
+- Piezo sensors generate up to **14V**, while ESP32 ADC max is **3.3V** (4095).  
+- Tested with **SIG Sauer P226 MK25 GBB handgun** (~100 m/s muzzle velocity).  
+- Reliable detection at 5 m distance.  
 
-- **Airsoft GBB Test**  
-  - Tested with SIG Sauer P226 MK25 (GBB).  
-  - Velocity ≈ **100 m/s**, detected reliably at 5 m.  
+### Heatmap Analysis  
+- A **grid test** (60×60 mm and 100×200 mm) was used to simulate projectile impacts on the vest pad.  
+- **Heatmaps** were generated using Python visualization to show impact distribution:  
+  - **Center areas** (closest to the sensor) produce the highest ADC readings.  
+  - **Edges of the pad** show weaker signals, sometimes too low to be detected.  
+  - Vibrations propagate to neighboring pads, but the **highest ADC value always corresponds to the direct hit pad**.  
+- This proves SmartVest can **localize hits accurately** by identifying the strongest signal zone.  
 
-- **Heatmap Analysis**  
-  - Strongest detection near sensor, weaker at pad edges.  
-  - Vibrations spread, but direct hit always produces the highest ADC value.  
+*(Add images of heatmap here, e.g. 60x60 grid & 100x200 pad results)*  
 
-- **ESP-NOW Communication**  
-  - Average latency: **1–2 ms**, occasional spikes up to 45 ms (due to interference).  
-  - Stable and responsive for real-time weapon lock.  
+### ESP-NOW Communication  
+- Average latency: **1–2 ms**, with occasional spikes up to 45 ms due to interference.  
+- Still fast and stable enough for **real-time weapon lock & feedback**.  
 
 ---
 
@@ -83,13 +87,14 @@ SmartVest detects and classifies hits from projectiles (BBs or rubber bullets) o
 
 ## 📸 Prototype & Dashboard  
 
-(Add your prototype photos, PCB screenshots, and monitoring UI here)  
+(Add your prototype photos, PCB screenshots, heatmap images, and monitoring UI here)  
 
 ---
 
 ## ⚡ Conclusion  
 
 SmartVest integrates **real-time hit detection**, **automatic weapon lock**, and **centralized monitoring** into one system.  
+Through **heatmap testing**, the system shows reliable hit localization and clear differentiation of impact zones.  
 It enhances **fairness, sportmanship, and immersion** in airsoft games by combining IoT technology with game-like mechanics.  
 
 ---
